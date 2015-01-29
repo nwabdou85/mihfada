@@ -1,0 +1,39 @@
+.panel-heading {
+padding: 1px 15px;
+}
+
+.panel-primary>.panel-heading {
+color: #fff;
+background-color: #BE0115;
+border-color: #BE0115;
+}
+
+.panel-footer {
+padding: 3px 15px 1px;
+box-shadow: rgb(255, 255, 255) 0px 1px 0px 0px inset;
+    /*text-align: center;*/
+}
+
+.muted {
+color: #999999;
+display: inline-block;
+}
+.panel{
+	z-index: 110;
+}
+
+h6{
+	font-family: helvetica, arial, sans-serif;
+font-size: 14px;
+line-height: normal;
+font-weight: bold;
+}
+.panel-primary {
+  margin-left: auto;
+  margin-right: auto;	
+width: 340px;
+ box-shadow: rgba(0, 0, 0, 0.298039) 0px 3px 7px 0px;
+    z-index: 110;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.298039);
+}

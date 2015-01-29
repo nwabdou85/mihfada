@@ -1,0 +1,38 @@
+body {
+background-color: /*#a70000*/rgb(249, 66, 158); /*#A31A48*/
+width: 100%;
+/*CB2402      
+*/}
+.bttn {
+	margin: 1%;
+  background-color: #f7f7f7;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  color: black;
+  position: relative;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+}
+.btn:hover{
+  text-decoration: none;
+  color: #555;
+  background: #f5f5f5;
+}
+#tex {
+/* margin: 4%; */
+color: white;
+margin-bottom: 4%;
+margin-left: 0.5%;
+font-weight: bold;
+}
+
+#seeed{ 
+  position:fixed;
+  z-index: 120;
+  position:relative;
+  margin-left: 30%;
+}

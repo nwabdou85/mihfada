@@ -1,0 +1,48 @@
+<template name="position">
+<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+<div class="panel panel-primary" id="{{_id}}">
+  <div class="panel-heading">
+  {{#if hadanata3ou}}
+        <a  class="close" data-dismiss="modal">x</a>{{/if}}
+        {{#if editing_tablename}} 
+          <input class="input input-medium tablename" value="{{name}}" type="text" style="color:black;" />
+        {{else}}
+        <h6 class="tablename">{{name}}</h6>
+        {{/if}}
+      
+  <!--   <h3 class="panel-title">Panel title</h3> -->
+  </div>
+  <div class="panel-body">
+    <div id="{{_id}}">
+         {{#if editing_field}}
+       
+        <textarea class="input input-lg efield" name="efield" type="text" style="color:black;">
+        {{domaine}}
+        </textarea>
+         {{else}}
+          <span>
+          {{domaine}}
+         </span>
+         {{/if}}
+       </div>
+  </div>
+  <div class="panel-footer">
+  <div class="row">
+    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+      {{#if editing_footer}}
+          <input class="input input-medium footer" value="{{footername}}" type="text" style="color:black;" />
+        {{else}}
+        <p class="muted">{{footername}}</p>
+        {{/if}}
+        
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <a href="{{pathFor route='send'}}" >
+      <span class="glyphicon glyphicon-share-alt"></span>
+      </a>
+    </div>
+  </div>
+      </div>       
+  </div>
+</div>
+</template>

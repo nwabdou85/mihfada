@@ -1,0 +1,13 @@
+#login-buttons a {
+font-size: 14px;
+/*color: white;*/
+}
+
+#login-buttons a:hover {
+font-size: 14px;
+color: #337ab7;
+}
+
+#bs-example-navbar-collapse-1{
+	margin-right: 2.5%;
+}
