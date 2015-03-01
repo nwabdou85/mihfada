@@ -1,0 +1,38 @@
+#sign{
+
+	background: url(/sign.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    
+}
+
+
+.exsting {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-left: 4%;
+	margin-top: 10rem;
+}
+ .exsting p {
+ 	margin-top: 4%;
+ }
+ .existe {
+ 	background-color: rgba(0, 0, 0, 0.5);
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-left: 4%;
+	margin-top: 6rem;
+	margin-bottom: 13rem;
+ }
+
+#page1{
+	position: absolute; 
+	width: 100%;
+	left: 0; 
+	text-align: center;
+	margin: auto;
+}

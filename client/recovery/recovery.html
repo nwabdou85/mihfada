@@ -1,0 +1,41 @@
+<template name="recovery">
+<div class="container">
+<div class="row">
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+     {{#if resetPassword}}
+     <h1 id="resete">قم بادخال كلمة السر التي ترغب فيها</h1>
+    <form id="set-new-password">
+     <div class="form-group">
+      
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <input type="submit" value="عيين كلمة السر الجديدة" class=" btn-md btn btn-danger" >
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <input type="text" id="new-password" placeholder="حاول ان ﻻ تنساها مرة اخرى" class="form-control input-md" >
+      </div>
+      </div>
+    </form>
+  {{else}}
+
+    <h1 id="resete">يرجي ملئ الفراغ اسفله للحصول على الرابط من اجل تغيير كلمة السر الخاصة بك</h1>
+    <form id="forgot-password">
+      <div class="form-group">
+       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+         <input type="submit" value="احصل على الرابط لتغيير كلمة السر" class=" btn-md btn btn-danger">
+       </div>
+       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <label for="user-email" class="sr-only"> </label>
+        <input type="email" class="form-control input-md" id="user-email" placeholder="ادخل ايميلك هنا">  
+       </div>
+     </div>
+    </form>
+  {{/if}}	
+     
+
+    </div>
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+</div>
+</div>
+</template>

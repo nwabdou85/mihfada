@@ -8,6 +8,11 @@ background-color: #BE0115;
 border-color: #BE0115;
 }
 
+#closes {
+	float: left;
+	margin-top: 5px;
+}
+
 .panel-footer {
 padding: 3px 15px 1px;
 box-shadow: rgb(255, 255, 255) 0px 1px 0px 0px inset;
@@ -15,8 +20,10 @@ box-shadow: rgb(255, 255, 255) 0px 1px 0px 0px inset;
 }
 
 .muted {
-color: #999999;
-display: inline-block;
+color: black;
+font-weight: bold;
+text-align: center;
+margin-top: 5px;
 }
 .panel{
 	z-index: 110;
@@ -31,9 +38,42 @@ font-weight: bold;
 .panel-primary {
   margin-left: auto;
   margin-right: auto;	
-width: 340px;
  box-shadow: rgba(0, 0, 0, 0.298039) 0px 3px 7px 0px;
     z-index: 110;
     background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box padding-box;
     border: 1px solid rgba(0, 0, 0, 0.298039);
+}
+
+
+
+
+
+
+
+
+
+
+#comme{
+  background-color: white;
+  padding: 1%;
+}
+
+.commen{
+  background-color: white;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 1%;
+}
+.comments{
+  padding-right: 0;
+}
+
+#retour{
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.comments{
+  padding-left: 0;
+  padding-right: 0;
 }
