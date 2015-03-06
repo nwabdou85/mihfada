@@ -3,49 +3,56 @@
  <div class="container">
 	<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7" style="padding-top:10%; text-align: center;">
-				    <h1 style="font-size:17rem;">محفظتي</h1>
-					<h1 style="font-size:8rem;">ﻻ تدع اي شئ للنسيان</h1>
-					<h3 style="font-size:4rem;">كل افكارك, اشغالك في مكان واحد</h3>
-				</div>
+				    <h1  id="h1">محفظتي</h1>
+					<h1  id="h8">ﻻ يمكن ان تنسى شئ بعد اليوم</h1>
+<!-- 					<h3 style="font-size:4rem;">كل افكارك, اشغالك في مكان واحد</h3>
+ -->				</div>
 				
-                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-                	<div class="row">
-                		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                			<div class="exsting">
-                				<h5 style="font-weight:bold; color:white;padding-right:5%;">مستخدم موجود</h5>
-<div class="row" style="margin-bottom:1%; padding-right:3%;">              				
- <form class="form-inline" id="login">
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="exsting">
+                        <h5 style="font-weight:bold; color:white;padding-right:5%;">مستخدم موجود</h5>
+<div class="row">              				
+ <form class="form-horizontal" id="login">
+ <div class="loginn">
   
-
-   <div class="form-group">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
   <div class="form-group">
+  <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+    </div>
+  <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
     <label class="sr-only" for="exampleInputEmail3"></label>
     <input type="email" class="form-control input-sm" id="exampleInputEmail3" placeholder="ادخل اﻻيميل">
   </div>
-  </div></div>
+  </div>
   
 
   <div class="form-group">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-  <div class="form-group">
+  <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+    </div>
+  <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
     <label class="sr-only" for="exampleInputPassword3"></label>
     <input type="password" class="form-control input-sm" id="exampleInputPassword3" placeholder="كلمة السر">
   </div>
-  </div></div>
+  </div>
 
    
 
   <div class="form-group">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-  <button type="submit" class="btn btn-primary btn-sm">دخول</button></div></div>
+  <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+   <a href="{{pathFor route='recovery'}}" style="padding-right:5%;">{{> phrase}}</a>
+    </div>
+  <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+  <button type="submit" class="btn btn-primary btn-sm">دخول</button>
+  </div>
+  </div>
 
 
 
-
+</div>
 </form>
 </div>
-                				<a href="{{pathFor route='recovery'}}" style="padding-right:5%;">{{> phrase}}</a>
+                				
                 				
                 			</div>
                 		</div>

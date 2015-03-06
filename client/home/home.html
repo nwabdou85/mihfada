@@ -11,7 +11,7 @@
             </form>
         </li>
         <li><a href="{{pathFor route='contact'}}">تواصل معنا</a></li>
-        <li><a href="#">فيما يخصنا</a></li>
+        <li><a href="{{pathFor route='aboutus'}}">فيما يخصنا</a></li>
         <li><a href="{{pathFor route='home'}}">الرئيسية</a></li>
         <li><a href="#">{{currentUser.profile.fullname}}</a></li>
       </ul>
@@ -52,7 +52,7 @@
            <span class="input-group-btn">
               <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
            </span>
-            <input type="text" name="name" class="form-control">
+            <input type="text" name="name" class="form-control" id="names">
             
           </div>
         </form>
@@ -60,7 +60,9 @@
 	</div>
 	<div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    
       {{> lien}}
+  
     </div>
 	</div>
 
@@ -68,7 +70,9 @@
 
    <div id="col" class="col-xs-7 col-sm-7 col-md-8 col-lg-8"> 
      <div id="item">
+   
       {{> dogo}}
+   
      </div>
   </div>
  </div>
@@ -79,6 +83,7 @@
 <template name="lien">
   {{#each liens}}
 	  <ul>
+   
      	<li><h4>
              
       {{#if closes}}
@@ -91,6 +96,7 @@
         {{sousplus}}
     
       </h4></li>
+   
      </ul>
   {{/each}}
 </template>

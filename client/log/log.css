@@ -15,7 +15,8 @@
 	padding-top: 2%;
 	padding-bottom: 2%;
 	padding-left: 4%;
-	margin-top: 10rem;
+	padding-right: 7%;
+	margin-top: 7rem;
 }
  .exsting p {
  	margin-top: 4%;
@@ -26,7 +27,7 @@
 	padding-bottom: 2%;
 	padding-left: 4%;
 	margin-top: 6rem;
-	margin-bottom: 13rem;
+	margin-bottom: 10rem;
  }
 
 #page1{
@@ -35,4 +36,29 @@
 	left: 0; 
 	text-align: center;
 	margin: auto;
+}
+
+/*#login {
+	margin-right:3%;
+}*/
+
+/*#loginn{
+	padding-right: 3%;
+}*/
+
+#h1{
+	font-size:17rem;
+	border-bottom-style: dotted;
+	padding-bottom: 2%;
+}
+
+#h8{
+    font-size:8rem;
+    color: white;
+}
+
+.loginn a {
+   
+   background: white;
+   padding: 4%;
 }

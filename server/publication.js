@@ -4,3 +4,7 @@ Meteor.publish("positions",function(){
 Meteor.publish("soux",function(){
  return Soux.find();
 });
+
+Meteor.publish("comment",function(){
+ return Comment.find();
+});

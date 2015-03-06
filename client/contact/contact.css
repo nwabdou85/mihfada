@@ -1,0 +1,48 @@
+#containerco{
+
+	padding-top: 5%;
+}
+
+#devisRapid h2 {
+  color: #1a171b;
+  line-height: 22px;
+  text-transform: uppercase;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 2.7rem;
+}
+
+
+.wrapper {
+  max-width: 400px;
+  width: 100%;
+  background: #eceff1;
+  padding: 0 0 1rem; 
+}
+.wrapper label {
+  color: #13a4cc;
+  font-family: 'Crete Round', 'Arial', serif;
+  font-size: 16px;
+}
+
+.wrapper h5 {
+	  margin: 2rem 2rem 1rem;
+	  text-align: center;
+    color: #475E1F;
+    font-family: "Alfa Slab One",cursive;
+}
+
+.form-header {
+  background: #fff;
+  text-align: center;
+  font-size: 1.25rem;
+/*  font-weight: 600;
+*/  color: #212121;
+  padding: 0.5rem;
+  margin: 0 0 0rem;
+  position: relative;
+  font-weight: bold;
+  }
+
+    .form-group {
+  margin: 1rem 2rem 1rem;
+}

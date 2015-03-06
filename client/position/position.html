@@ -7,7 +7,7 @@
         {{#if editing_tablename}} 
           <input class="input input-medium tablename" value="{{name}}" type="text" style="color:black;" />
         {{else}}
-        <h6 class="tablename">{{name}}</h6>
+        <h6 class="tablenamee">{{name}}</h6>
         {{/if}}
       
  
@@ -72,7 +72,7 @@
             </form>
         </li>
         <li><a href="{{pathFor route='contact'}}">تواصل معنا</a></li>
-        <li><a href="#">فيما يخصنا</a></li>
+        <li><a href="{{pathFor route='aboutus'}}">فيما يخصنا</a></li>
         <li><a href="{{pathFor route='home'}}">الرئيسية</a></li>
         <li><a href="#">{{currentUser.profile.fullname}}</a></li>
       </ul>
