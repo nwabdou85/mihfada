@@ -1,12 +1,21 @@
-<template name="log" >
+<template name="log">
 <div  id="sign">
  <div class="container">
+ <div class="row">
+   <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
+     <img src="/logo_merhaa.png" alt="log de merha مرحا">
+   </div>
+ </div>
 	<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7" style="padding-top:10%; text-align: center;">
-				    <h1  id="h1">محفظتي</h1>
-					<h1  id="h8">ﻻ يمكن ان تنسى شئ بعد اليوم</h1>
-<!-- 					<h3 style="font-size:4rem;">كل افكارك, اشغالك في مكان واحد</h3>
- -->				</div>
+             <h1 id="ma">مع</h1>
+				    <h1  id="h1">مرحا</h1>
+					 <h1  id="h8">ﻻ يمكن ان تنسى شئ بعد اليوم</h1>           
+            <div class="addthis_sharing_toolbox"></div>
+
+              <!--<h3 style="font-size:4rem;">كل افكارك, اشغالك في مكان واحد</h3>
+             -->			
+          </div>
 				
         <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
                   <div class="row">
@@ -22,7 +31,7 @@
     </div>
   <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
     <label class="sr-only" for="exampleInputEmail3"></label>
-    <input type="email" class="form-control input-sm" id="exampleInputEmail3" placeholder="ادخل اﻻيميل">
+    <input  type="email" class="form-control input-md" id="exampleInputEmail3" placeholder="ادخل اﻻيميل">
   </div>
   </div>
   
@@ -32,7 +41,7 @@
     </div>
   <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
     <label class="sr-only" for="exampleInputPassword3"></label>
-    <input type="password" class="form-control input-sm" id="exampleInputPassword3" placeholder="كلمة السر">
+    <input type="password" class="form-control input-md" id="exampleInputPassword3" placeholder="كلمة السر">
   </div>
   </div>
 
@@ -47,8 +56,6 @@
   </div>
   </div>
 
-
-
 </div>
 </form>
 </div>
@@ -60,17 +67,67 @@
 
 
 
-                 <div class="row" >
-                		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                		<div class="existe">
-                		<h3 style="padding-right:5%;">مستخدم جديد؟</h3>
+
+
+
+
+<!-- 
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+   <div class="exsting">
+                        
+<div class="row">                     
+ <form class="form-horizontal" id="logines">
+ <div class="loginn">
+
+<div class="form-group" style="text-align:center;">
+ <div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+   <p style="color:white;"> او </p>
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <button id="facebook-login" class="btn btn-primary"> دخول بالفايس بوك</button>
+ {{> facebook}}
+
+  </div>
+  </div>
+  </div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="row" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+     <div class="existe">
+      <h3 style="padding-right:5%;">مستخدم جديد؟</h3>
  <form class="form-horizontal" id="inscription" style="padding-right:3%;">
   <div class="form-group">
     <label for="inputEmail3" ></label>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
     </div>
     <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
-      <input type="text" class="form-control input-sm" id="inputEmail3" placeholder="اﻻسم">
+      <input type="text" class="form-control input-md" id="inputEmail3" placeholder="اﻻسم">
     </div>
   </div>
   <div class="form-group">
@@ -78,7 +135,7 @@
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
     </div>
     <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
-      <input type="email" class="form-control input-sm" id="inputEmail4" placeholder="اﻻيميل">
+      <input type="email" class="form-control input-md" id="inputEmail4" placeholder="اﻻيميل">
     </div>
   </div>
   <div class="form-group">
@@ -86,11 +143,11 @@
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
     </div>
     <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
-      <input type="password" class="form-control input-sm" id="inputPassword3" placeholder="كلمة السر">
+      <input type="password" class="form-control input-md" id="inputPassword3" placeholder="كلمة السر">
     </div>
   </div>
   <div class="form-group">
-    <div class="col-sm-offset-10 col-sm-2 col-lg-offset-10 col-lg-2">
+    <div class="col-xs-offset-10 col-xs-2 col-sm-offset-10 col-sm-2  col-md-offset-10 col-md-2  col-lg-offset-10 col-lg-2">
       <button type="submit" class="btn btn-primary btn-sm">تسجيل</button>
     </div>
   </div>
@@ -144,3 +201,15 @@
    نسيت كلمة السر؟
  {{/if}}
 </template>
+
+
+<template name="facebook">
+    {{#if currentUser}}
+        {{currentUser.services.facebook.name}} -
+        {{currentUser.services.facebook.gender}}
+        <button id="logout">Logout</button>
+    {{else}}
+        <button id="facebook-login" class="btn btn-default"> Login with Facebook</button>
+    {{/if}}
+</template>
+

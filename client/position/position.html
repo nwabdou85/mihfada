@@ -1,6 +1,6 @@
 <template name="position">
-<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-<div class="panel panel-primary">
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+<div class={{panel}}>
   <div class="panel-heading">
         {{#if hadanata3ou}} 
         <a  class="close" data-dismiss="modal" id="closes">x</a>{{/if}}
@@ -86,7 +86,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"> انا منظم ... اذن انا موجود  <p  style="display:inline; font-size:13px;"></p></a>
+      <a class="navbar-brand" href="#"> انا منظم ... اذن انا ناجح   <p  style="display:inline; font-size:13px;"></p></a>
     </div>
 
   </div>
@@ -112,7 +112,7 @@
   
    <div class="row" id="comme">
     
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       {{#if currentUser}}
          {{> commentSubmit}}
        {{else}}
@@ -131,9 +131,14 @@
   <!-- <h4>
    <span class="date"> {{submittedText}}</span>
   </h4> -->
-   <p>
+   
    <a  class="close" data-dismiss="modal" id="closes">x</a>
+   <p>
+   {{#if editing_body}} 
+          <textarea  class="form-control tablebody" value="{{body}}" type="text" rows="3"></textarea>
+        {{else}}
    {{body}}
+   {{/if}}
    </p>
 
  </li>
@@ -143,8 +148,8 @@
  <form name="comment" class="comment-form form">
   <div class="form-group">
    <div class="controls">
-    <label for="body">اترك تعليقات او مﻻحظات هنا</label>
-     <textarea name="body" id="body" class="form-control" rows="3"></textarea>
+    <!-- <label for="body">اترك تعليقات او مﻻحظات هنا</label> -->
+     <textarea name="body" id="body" class="form-control" placeholder="اترك تعليقات او ملاحظات هنا" rows="3"></textarea>
      <span class="help-block"></span>
    </div>
    </div>

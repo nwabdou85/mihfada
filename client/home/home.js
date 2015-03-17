@@ -5,11 +5,76 @@ Template.dogo.events ({
   
  if(e.target.className === 'btn btn-default bttn'){
       var aid = Session.get('id');
-     var id = Positions.insert({ name:'غير العنوان من هنا',
-      domaine:'ضع شرح مبسط ووافي هنا',
-      footername:'ضع مﻻحظة او التوقيت',
+     var id = Positions.insert({ name:'غير العنوان من هنا (على اﻻقل 5 احرف)',
+      domaine:'ضع شرح مبسط ووافي هنا (على اﻻقل 16 حرفا)',
+      footername:'مﻻحظة,التوقيت (على اﻻقل 6 احرف)',
       aid: aid,
-      userId:Meteor.userId()
+      userId:Meteor.userId(),
+      panel: "panel panel-primary"
+     });
+     Session.set('editing_table',id);
+	}
+},
+'click .btn-info': function (e, tmpl) {
+	e.preventDefault();
+	e.stopPropagation();
+  
+ if(e.target.className === 'btn btn-info bttn'){
+      var aid = Session.get('id');
+     var id = Positions.insert({ name:'غير العنوان من هنا (على اﻻقل 5 احرف)',
+      domaine:'ضع شرح مبسط ووافي هنا (على اﻻقل 16 حرفا)',
+      footername:'مﻻحظة,التوقيت (على اﻻقل 6 احرف)',
+      aid: aid,
+      userId:Meteor.userId(),
+      panel: "panel panel-info"
+     });
+     Session.set('editing_table',id);
+	}
+},
+'click .btn-success': function (e, tmpl) {
+	e.preventDefault();
+	e.stopPropagation();
+  
+ if(e.target.className === 'btn btn-success bttn'){
+      var aid = Session.get('id');
+     var id = Positions.insert({ name:'غير العنوان من هنا (على اﻻقل 5 احرف)',
+      domaine:'ضع شرح مبسط ووافي هنا (على اﻻقل 16 حرفا)',
+      footername:'مﻻحظة,التوقيت (على اﻻقل 6 احرف)',
+      aid: aid,
+      userId:Meteor.userId(),
+      panel: "panel panel-success"
+     });
+     Session.set('editing_table',id);
+	}
+},
+'click .btn-warning': function (e, tmpl) {
+	e.preventDefault();
+	e.stopPropagation();
+  
+ if(e.target.className === 'btn btn-warning bttn'){
+      var aid = Session.get('id');
+     var id = Positions.insert({ name:'غير العنوان من هنا (على اﻻقل 5 احرف)',
+      domaine:'ضع شرح مبسط ووافي هنا (على اﻻقل 16 حرفا)',
+      footername:'مﻻحظة,التوقيت (على اﻻقل 6 احرف)',
+      aid: aid,
+      userId:Meteor.userId(),
+      panel: "panel panel-warning"
+     });
+     Session.set('editing_table',id);
+	}
+},
+'click .btn-danger': function (e, tmpl) {
+	e.preventDefault();
+	e.stopPropagation();
+  
+ if(e.target.className === 'btn btn-danger bttn'){
+      var aid = Session.get('id');
+     var id = Positions.insert({ name:'غير العنوان من هنا (على اﻻقل 5 احرف)',
+      domaine:'ضع شرح مبسط ووافي هنا (على اﻻقل 16 حرفا)',
+      footername:'مﻻحظة,التوقيت (على اﻻقل 6 احرف)',
+      aid: aid,
+      userId:Meteor.userId(),
+      panel: "panel panel-danger"
      });
      Session.set('editing_table',id);
 	}
@@ -40,9 +105,11 @@ Template.home.events ({
 	e.stopPropagation();
 
      var sousplus = tmpl.find('#names').value;
+     if (sousplus.length > 3) {
      var idd = Soux.insert({ sousplus: tmpl.find('#names').value, 
       userId:Meteor.userId()
-     });
+     })
+     };
      Session.set('editing_tablei',idd);
      tmpl.find('#names').value="";
 
@@ -81,6 +148,11 @@ Template.lien.helpers({
 		return Positions.find({aid:this._id}).count();
 	},
 
+ editing_lien:function (){
+  return Session.equals('editinglien',this._id);
+ }
+
+
 // 	ownere:function(){
 // 		var user = Meteor.user();
 // 		var userId = user._id;
@@ -109,6 +181,20 @@ Comment.remove({_id:null});
   e.preventDefault();
   e.stopPropagation();
   Session.set('id', this._id);
+}, 
+'dblclick #liensmot': function(e, tmpl){
+ e.preventDefault();
+ e.stopPropagation();
+ Session.set('editinglien',this._id);
+},
+'keyup .liensmot': function(e, tmpl){
+ e.preventDefault();
+ e.stopPropagation();
+ var sousplus=tmpl.find('.liensmot').value;
+ if (e.which === 13) {
+  Soux.update(this._id,{$set:{sousplus:tmpl.find('.liensmot').value}});
+  Session.set('editinglien',null);
+ }
 }
 });
 

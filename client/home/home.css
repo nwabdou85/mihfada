@@ -112,7 +112,7 @@ ul {
   display: inline;
 }
 
-@media (min-width: 1200px){
+@media (min-width: 300px) and (max-width: 12000px) {
 .col-lg-4, .col-lg-6, .col-lg-10, .col-lg-12 {
 float: right;
 }

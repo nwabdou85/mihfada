@@ -10,3 +10,5 @@ accounts-password
 iron:router
 accounts-base
 email
+accounts-facebook
+service-configuration

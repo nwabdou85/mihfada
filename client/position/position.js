@@ -6,7 +6,7 @@ Meteor.startup(function() {
 
 Template.position.events({
 'click h6': function(e, tmpl){
- e.preventDefault();
+ e.preventDefault(); 
  e.stopPropagation();
  Session.set('editing_tablename',this._id);
 }, 
@@ -66,25 +66,7 @@ Template.position.events({
 });
 
 
- Template.position.rendered = function () {
- if (Meteor.user().username === 'Admin') { 
 
-	$('.modal').draggable({
-		handle: '.modal-header',
-		// stop:function(e,ui){
-  //        var left = ui.position.left;
-  //         var top = ui.position.top;
-  //         Positions.update($(this).attr('id'),{$set:{left:lfet + 'px',top:top + 'px'}});
-		// }
-	})
-}
- }
-
- 
- Template.position.editing_tablename = function (){
- 	return Session.equals('editing_tablename',this._id);
-
- };
 
 Template.position.helpers({
   hadanata3ou: function (){
@@ -93,18 +75,27 @@ Template.position.helpers({
  },
  somecomments:function(){
   return Comment.find({commentId:this._id}).count();
- }
+ }, 
+ editing_tablename:function (){
+  return Session.equals('editing_tablename',this._id);
+ },
+ editing_field:function(){
+  return Session.equals('editing_field',this._id);
+},
+editing_footer:function(){
+  return Session.equals('editing_footer',this._id);
+}
 });
 
  // Template.position.dbfields = function (){
  // 	return  DBfields.find({tableid:this._id});
  // };
- Template.position.editing_field = function(){
-  return Session.equals('editing_field',this._id);;
-};
- Template.position.editing_footer = function(){
-  return Session.equals('editing_footer',this._id);
-}
+//  Template.position.editing_field = function(){
+//   return Session.equals('editing_field',this._id);;
+// };
+//  Template.position.editing_footer = function(){
+//   return Session.equals('editing_footer',this._id);
+// }
 
 
 
@@ -140,29 +131,41 @@ Template.commentSubmit.events({
   e.stopPropagation();
   var body = t.find('#body').value;
   var commentId = Session.get('commentId');
+  if (body.length > 3) {
   Comment.insert({body:body,
    commentId:commentId,
    userId:Meteor.userId()
     });
   t.find('#body').value="";
-
+}
  }
 
 });
 
-// Template.commentItem.helpers({
-
-//  body:function(){
-//   return Comment.find();
-//  }
- 
-// });
+Template.commentItem.helpers({
+editing_body:function (){
+  return Session.equals('editingBody',this._id);
+ }
+});
 
 Template.commentItem.events({
 'click #closes':function(){
   Comment.remove({_id:this._id});
+}, 
+ 'click p': function(e, tmpl){
+ e.preventDefault(); 
+ e.stopPropagation();
+ Session.set('editingBody',this._id);
+},
+'keyup .tablebody' :function(e, tmpl){
+  e.preventDefault();
+  e.stopPropagation();
+  var body = tmpl.find('.tablebody').value;
+ if (e.which == 13) {
+  Comment.update(this._id,{$set:{body:body}});
+  Session.set('editingBody',null);
+ }
 }
- 
 });
 
 Template.commentPage.helpers({

@@ -4,11 +4,31 @@ Meteor.startup(function(){
 })
 
 
+Template.log.rendered = function (){
+$('<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5506d3154f468857" async="async"><\/script>').appendTo(document.body);
+  
+
+   // $(function(){
+  
+   //  $(window).resize(function(){ // On resize
+   //      console.log($(window).height(), $(window).width() );
+   //      $('#sign').css({'height':(($(window).innerHeight)) +'px'});
+   //      console.log($('#sign').height());
+   //  });
+   //  $(window).resize(function(){ // On resize
+   //      $('#sign').css({'width':(($(window).width()))+'px'});
+   //  });
+   //  });
+
+}
+
+
 Template.log.events({
 	"submit #inscription":function(e,t){
 		e.preventDefault();
         e.stopPropagation();
-        
+    
+
 
             var username=t.find('#inputEmail3').value, 
 			    email=t.find('#inputEmail4').value,
@@ -89,7 +109,13 @@ Template.log.events({
 
         Meteor.loginWithPassword(unam, password, function(error){
         	if (error) {
-        		window.alert('اﻻيميل او كلمة السر خاطئة')
+
+        		if (error.message === 'User not found [403]') {
+                        window.alert('هذا المستخدم غير موجود');
+                    } else {
+                      window.alert('اﻻيميل او كلمة السر خاطئة')
+
+                    }
         	};
 
         })
@@ -112,7 +138,23 @@ Template.phrase.helpers({
 
 
 
-
+Template.facebook.events({
+    'click #facebook-login': function(event) {
+        Meteor.loginWithFacebook({}, function(err){
+            if (err) {
+                throw new Meteor.Error("Facebook login failed");
+            }
+        });
+    },
+ 
+    'click #logout': function(event) {
+        Meteor.logout(function(err){
+            if (err) {
+                throw new Meteor.Error("Logout failed");
+            }
+        })
+    }
+});
 
 
 
